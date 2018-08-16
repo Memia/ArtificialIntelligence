@@ -1,1 +1,1 @@
-We made a system consisting 4 waypoints and made AI cycle through them. For homework we are asked to make the AI utilise the navigation map.
+In this lesson we learnt to make enemy switch between patrolling and following the player
