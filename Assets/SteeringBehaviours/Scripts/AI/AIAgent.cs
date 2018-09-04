@@ -16,10 +16,10 @@ namespace SteeringBehaviours
         void Update()
         {
             if (point.magnitude > 0)
-            {
+            {   //Set the agent's destination to that point
                 agent.SetDestination(point);
             }
-        
+
         }
         public void SetTarget(Vector3 point)
         {   //this defines what you are refering to
