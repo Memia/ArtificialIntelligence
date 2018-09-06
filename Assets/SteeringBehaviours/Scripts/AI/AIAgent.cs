@@ -7,11 +7,30 @@ namespace SteeringBehaviours
     public class AIAgent : MonoBehaviour
     {
         #region Variables
-        public NavMeshAgent agent;
+
         private Vector3 point;
+        public float maxSpeed;
+        public float maxDistance;
+        public bool updatePosition;
+        public bool updateRotation;
+        public Vector3 velocity;
+
+        private Vector3 force;
+        private List<SteeringBehaviour> behaviours;
+        private NavMeshAgent agent;
         #endregion
 
+        void Awake()
+        {
 
+        }
+        void ComputeForces()
+        {
+        }
+        void ApplyVelocity()
+        {
+
+        }
         // Update is called once per frame
         void Update()
         {

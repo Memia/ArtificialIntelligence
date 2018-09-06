@@ -34,6 +34,7 @@ public class CameraBounds : MonoBehaviour
         {
             incomingPos.y = pos.x + halfSize.y;
         }
+        return Vector3.zero;
 
     }
 
