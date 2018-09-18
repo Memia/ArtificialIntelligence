@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace SteeringBehaviours
 {
+    // Base Class 
     [RequireComponent(typeof(AIAgent))]
     public abstract class SteeringBehaviour : MonoBehaviour
     {//"SteeringBehaviour" will only work if attached to AI agent
@@ -14,6 +15,16 @@ namespace SteeringBehaviours
         // Use this for initialization
         private void Awake()
         {
+
+        }
+        protected virtual void Update()
+        {
+
+        }
+
+        private void LateUpdate()
+        {
+            print("SteeringBehaviour Called!");
 
         }
         public virtual Vector3 GetForce()

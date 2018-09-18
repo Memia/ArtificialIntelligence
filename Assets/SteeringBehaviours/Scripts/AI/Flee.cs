@@ -22,7 +22,7 @@ namespace SteeringBehaviours
         public override Vector3 GetForce()
         {
             //Get direction to target
-            Vector3 direction = owner.transform.position +(target.position - owner.transform.position).normalized;
+            Vector3 direction = owner.transform.position +(owner.transform.position - target.position).normalized;
             //or use:  velocity.Normalize() instead of wrapping it in brackets and add .normalized;
             return direction * owner.maxSpeed ;
          

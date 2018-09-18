@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43900642, g: 0.48723543, b: 0.5674943, a: 1}
+  m_IndirectSpecularColor: {r: 0.43900603, g: 0.48723477, b: 0.5674932, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -99469,7 +99469,6 @@ GameObject:
   - component: {fileID: 1954744970}
   - component: {fileID: 1954744968}
   - component: {fileID: 1954744967}
-  - component: {fileID: 1954744969}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -99509,20 +99508,6 @@ MonoBehaviour:
   updatePosition: 0
   updateRotation: 0
   velocity: {x: 0, y: 0, z: 0}
---- !u!114 &1954744969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1954744966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4603e0fa3befdc846a255cbb062e4a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weighting: 0
-  owner: {fileID: 1954744968}
-  target: {fileID: 1473016603}
 --- !u!195 &1954744970
 NavMeshAgent:
   m_ObjectHideFlags: 0
