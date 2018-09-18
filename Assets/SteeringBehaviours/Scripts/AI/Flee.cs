@@ -21,7 +21,11 @@ namespace SteeringBehaviours
         }
         public override Vector3 GetForce()
         {
-            return base.GetForce();
+            //Get direction to target
+            Vector3 direction = owner.transform.position +(target.position - owner.transform.position).normalized;
+            //or use:  velocity.Normalize() instead of wrapping it in brackets and add .normalized;
+            return direction * owner.maxSpeed ;
+         
         }
 
     }

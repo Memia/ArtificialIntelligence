@@ -8,6 +8,7 @@ namespace SteeringBehaviours
     {
         public AIAgent agent;
         public Transform placeholderPoint;
+        
         private void OnDrawGizmosSelected()
         {
             Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -38,6 +39,27 @@ namespace SteeringBehaviours
                         placeholderPoint.position = hit.point;
                         //Update seek's target (which you might not need to do)
                         seek.target = placeholderPoint;
+                        Debug.Log("seek");
+                    }
+                }
+            }
+            if (Input.GetMouseButton(1))
+            {
+                //Try to get seek component on agent
+                Flee flee = agent.GetComponent<Flee>();
+                //if seek is not null
+                if (flee)
+                {
+                    //Ray casts from the camera
+                    Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hit;
+                    if (Physics.Raycast(camRay, out hit, 1000f))
+                    {
+                        //Update the transform's position
+                        placeholderPoint.position = hit.point;
+                        //Update seek's target (which you might not need to do)
+                        flee.target = placeholderPoint;
+                        Debug.Log("Flee");
                     }
                 }
             }
