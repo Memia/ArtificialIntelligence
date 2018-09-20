@@ -11,11 +11,11 @@ namespace SteeringBehaviours
         // The amount of influence the behaviour has over the other
         public float weighting;
         //Reference to AIAgent owner of behaviour
-        public AIAgent owner;
+       [HideInInspector] public AIAgent owner;
         // Use this for initialization
         private void Awake()
         {
-
+            owner = GetComponent<AIAgent>();
         }
         protected virtual void Update()
         {
